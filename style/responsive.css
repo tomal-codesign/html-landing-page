@@ -1,0 +1,159 @@
+@media screen and (max-width: 1280px) {
+    .count {
+        width: 100% !important;
+    }
+
+    .count p {
+        padding-left: 0 !important;
+    }
+}
+
+/* tablet responsive */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .desktop-menu .header-menu {
+        display: none !important;
+    }
+
+    .menu-btn {
+        display: block !important;
+    }
+
+    /* Service Part */
+    .services-img {
+        height: 400px !important;
+    }
+}
+
+/* mobile responsive */
+@media screen and (max-width: 767px) {
+    .desktop-menu .header-menu {
+        display: none !important;
+    }
+
+    .header-btn {
+        display: none !important;
+    }
+
+    .menu-btn {
+        display: block !important;
+        order: 1;
+    }
+
+    /* banner Part */
+    .banner-text {
+        padding: 20px !important;
+    }
+
+    .banner-text h1 {
+        font-size: 26px !important;
+    }
+
+    .banner-text h2 {
+        font-size: 18px !important;
+    }
+
+    .download-cv {
+        width: fit-content;
+    }
+
+    .count h2 {
+        font-size: 32px !important;
+    }
+
+    .banner-count {
+        padding: 10px !important;
+        flex-direction: row !important;
+        gap: 10px !important;
+    }
+
+    .count {
+        padding: 12px !important;
+    }
+
+    .count p {
+        padding-left: 0px !important;
+        font-size: 12px !important;
+    }
+
+    .count {
+        border-radius: 20px !important;
+    }
+
+    .count::before {
+        border-radius: 20px !important;
+    }
+
+    .section-header {
+        font-size: 20px !important;
+    }
+
+    /* service part */
+    .services-part .section-header {
+        margin-bottom: 0 !important;
+    }
+
+    .services-img {
+        height: 160px !important;
+    }
+
+    .services-box {
+        padding: 14px !important;
+    }
+
+    /* education part */
+    .education-box .education-text h2 {
+        font-size: 16px !important;
+    }
+
+    /* portfolio part */
+    .portfolio-part .section-header {
+        margin-bottom: 0 !important;
+        padding-bottom: 0 !important;
+    }
+
+    .portfolio-img {
+        height: 160px !important;
+    }
+
+    .portfolio-box .tag {
+        padding: 4px 10px !important;
+        margin-top: 10px !important;
+        margin-right: 8px !important;
+    }
+
+    .portfolio-box h3 {
+        font-size: 14px !important;
+        font-weight: 500 !important;
+    }
+
+    .portfolio-box {
+        padding: 14px !important;
+    }
+
+    .common-bg {
+        padding: 40px 20px 20px !important;
+    }
+
+    /* testimonial part */
+    .testimonial-box {
+        margin-top: 0rem !important;
+    }
+
+    /* contact part */
+    .contact-form {
+        padding: 20px !important;
+    }
+
+    .contact-text {
+        flex: 1;
+    }
+
+    /* footer part */
+    .footer-main-content {
+        padding: 10px !important;
+    }
+
+    .footer-menu ul li a {
+        padding: 10px !important;
+    }
+}

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/responsive.css">
+    <!-- Google Fonts: Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="header-part">
+        <div class="container">
+            <!-- Desktop Menu -->
+            <div class="desktop-menu d-flex align-items-center justify-content-between">
+
+                <!-- Menu toggle button for mobile -->
+                <a class="btn menu-btn" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+                    aria-controls="offcanvasExample">
+                    <i class="iconify" data-icon="heroicons-outline:menu" style="font-size:26px;"></i>
+                </a>
+
+                <!-- Logo and Company Name -->
+                <a href="#home">
+                    <div class="header-logo">
+                        <div class="header-logo-img">
+                            <img src="../../assets/logo.png" alt="Logo" />
+                        </div>
+                        <h2>Your Name</h2>
+                    </div>
+                </a>
+
+                <!-- Header Menu -->
+                <div class="header-menu">
+                    <ul>
+                        <li><a class="nav-bar" href="#home">Home</a></li>
+                        <li><a class="nav-bar" href="#about">About Me</a></li>
+                        <li><a class="nav-bar" href="#services">Services</a></li>
+                        <li><a class="nav-bar" href="#portfolio">Portfolio</a></li>
+                        <li><a class="nav-bar" href="#testimonials">Testimonials</a></li>
+                        <li><a class="nav-bar" href="#contact">Contact Me</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Button -->
+                <div>
+                    <a href="#contact" class="header-btn">
+                        Let's Talk
+                        <i class="iconify" data-icon="ph:chat-text" style="font-size:18px;"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Mobile & Tablet Menu (Offcanvas) -->
+            <div class="navbar-offcanvas offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
+                aria-labelledby="offcanvasExampleLabel">
+
+                <!-- Offcanvas Header -->
+                <div class="offcanvas-header d-flex align-items-center justify-content-between">
+                    <div class="header-logo">
+                        <div class="header-logo-img">
+                            <img src="../../assets/logo.png" alt="Logo" />
+                        </div>
+                        <h2>Your Name</h2>
+                    </div>
+
+                    <!-- Close button for offcanvas menu -->
+                    <button type="button" class="close-btn" data-bs-dismiss="offcanvas" aria-label="Close">
+                        <i class="iconify" data-icon="proicons:cancel" style="font-size:24px;"></i>
+                    </button>
+                </div>
+
+                <!-- Offcanvas Body -->
+                <div class="offcanvas-body">
+                    <div class="d-flex align-items-center justify-content-between">
+
+                        <!-- Mobile Menu -->
+                        <div class="header-menu-mobile">
+                            <ul>
+                                <li><a href="#home" data-bs-dismiss="offcanvas" aria-label="Close">Home</a></li>
+                                <li><a href="#about" data-bs-dismiss="offcanvas" aria-label="Close">About Me</a></li>
+                                <li><a href="#services" data-bs-dismiss="offcanvas" aria-label="Close">Services</a></li>
+                                <li><a href="#portfolio" data-bs-dismiss="offcanvas" aria-label="Close">Portfolio</a>
+                                </li>
+                                <li><a href="#testimonials" data-bs-dismiss="offcanvas"
+                                        aria-label="Close">Testimonials</a></li>
+                                <li><a href="#contact" data-bs-dismiss="offcanvas" aria-label="Close">Contact Me</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    <!-- Bootstrap Bundle JS (includes Popper for Offcanvas) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Scroll effect to add "scrolled" class -->
+    <script>
+        const header = document.querySelector('.header-part');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 200) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
+
+</body>
+
+</html>
