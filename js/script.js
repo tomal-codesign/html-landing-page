@@ -16,6 +16,7 @@ AOS.init({
     once: false
 });
 
+// ---------------- Smooth Scrolling and Scroll Spy ----------------
 document.querySelectorAll('.nav-bar').forEach(link => {
     link.addEventListener('click', function (e) {
         e.preventDefault(); // prevent default anchor behavior
@@ -32,6 +33,29 @@ document.querySelectorAll('.nav-bar').forEach(link => {
                 top: offsetPosition,
                 behavior: 'smooth'
             });
+        }
+    });
+});
+// Scroll spy (active status when hitting section)
+const sections = document.querySelectorAll("section[id]");
+const navLinks = document.querySelectorAll(".nav-bar");
+
+window.addEventListener("scroll", () => {
+    let current = "";
+
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop - 220; // adjust for header offset
+        const sectionHeight = section.offsetHeight;
+
+        if (window.pageYOffset >= sectionTop && window.pageYOffset < sectionTop + sectionHeight) {
+            current = section.getAttribute("id");
+        }
+    });
+
+    navLinks.forEach(link => {
+        link.classList.remove("active");
+        if (link.getAttribute("href").substring(1) === current) {
+            link.classList.add("active");
         }
     });
 });

@@ -164,6 +164,13 @@ body {
 
 /* common css */
 
+.nav.active {
+    color: var(--normal-text-color);
+    font-weight: 500;
+    background: var(--box-overlay-color);
+    border: 1px solid var(--second-border);
+}
+
 /* title  */
 .title-part {
     position: absolute;
