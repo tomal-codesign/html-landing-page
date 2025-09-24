@@ -16,6 +16,26 @@ AOS.init({
     once: false
 });
 
+document.querySelectorAll('.nav-bar').forEach(link => {
+    link.addEventListener('click', function (e) {
+        e.preventDefault(); // prevent default anchor behavior
+
+        const targetId = this.getAttribute('href').substring(1); // remove #
+        const targetElement = document.getElementById(targetId);
+
+        if (targetElement) {
+            const headerOffset = 80; // offset in px
+            const elementPosition = targetElement.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+            });
+        }
+    });
+});
+
 // ---------------- Banner Counter ----------------
 (function () {
     const counters = document.querySelectorAll(".counter");
